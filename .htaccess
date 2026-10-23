@@ -1,0 +1,24 @@
+# Apache 2.4 (padrão da hospedagem compartilhada atual)
+Options -Indexes
+
+# Bloqueia acesso direto a arquivos sensíveis
+<FilesMatch "^\.(env|git|htaccess|htpasswd)">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(sql|md|lock|json|log|ini|bak|dist)$">
+    Require all denied
+</FilesMatch>
+
+# Bloqueia acesso direto às pastas internas
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(config|includes|sql|vendor)(/|$) - [F,L]
+</IfModule>
+
+# Cabeçalhos de segurança
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "same-origin"
+</IfModule>

@@ -1,0 +1,10 @@
+# Credenciais e configurações locais
+.env
+
+# Dependências (recriadas com: composer install)
+vendor/
+
+# Logs e arquivos temporários
+*.log
+.DS_Store
+Thumbs.db

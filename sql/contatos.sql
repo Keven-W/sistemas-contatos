@@ -1,0 +1,11 @@
+
+SET NAMES utf8mb4;
+
+CREATE TABLE IF NOT EXISTS contatos (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    telefone VARCHAR(20) NOT NULL,
+    mensagem TEXT NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

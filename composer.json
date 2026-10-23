@@ -1,0 +1,10 @@
+{
+    "name": "escalaweb/sistema-contatos",
+    "description": "Sistema de contatos em PHP com envio de e-mail via PHPMailer",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.0",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
