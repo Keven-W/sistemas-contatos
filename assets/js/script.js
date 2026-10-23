@@ -114,7 +114,7 @@
     function atualizarContador() {
         if (!campoMensagem || !contador) {
             return;
-        }
+        } 
         const tamanho = campoMensagem.value.length;
         contador.textContent = tamanho + '/' + LIMITE_MENSAGEM;
         contador.style.color = tamanho > LIMITE_MENSAGEM * 0.9 ? '#dc2626' : '';
